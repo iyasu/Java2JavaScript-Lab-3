@@ -30,5 +30,5 @@ function assignment3Point2(numArr){
 // Simply for the giggles, it actually works though...
 function cheekyOneLinerForALaugh(numArr){
   var sortedArr = numberArr.sort().join('').split('').sort().reverse().join('');
-  return numArr;
+  return sortedArr;
 }
