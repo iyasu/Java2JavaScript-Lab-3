@@ -2,12 +2,21 @@
 
 var display = document.getElementById("display");
 
-function yourFunctionName (){
-  display.innerHTML = "hello";
+function combineArrays(letters, numbers) {
+    let combined = [];
+    for (let i = 0; i < letters.length; i++) {
+        combined.push(letters[i]);
+        combined.push(numbers[i]);
+    }
+
+    display.innerHTML = "[" + combined + "]<br>";
 }
 
-function example(){
-  var v = 3 +4;
-  
-  display.innerHTML = v;
+function largeNumber(someNumbers) {
+    someNumbers = someNumbers.sort().reverse();
+    let result = "";
+    for(let i = 0; i < someNumbers.length; i++){
+        result += someNumbers[i];
+    }
+    display.innerHTML = result;
 }
