@@ -12,11 +12,23 @@ function assigntment3Point1(){
   display.innerHTML = tempArr;
 }
 
-function assignment3Point2(){
-  var numArray = [1,2,2,35,23,5,37,8];
-  var revArray = numArray.reverse();
-  var splitArr = revArray.toString().replace(/,/g,'');
-  display.innerHTML = splitArr;
-
-
+function assignment3Point2(numArr){
+  var result = "";
+  for (var i = 0; i < numArr.length; i++){
+    str += numArr[i];
+  }
+  for (var i = 0; i < result.length; i++){
+    str+= numArr[i];
+  }
+  numArr = numArr.sort().reverse();
+  result = "";
+  for (var i = 0; i < numArr.length; i++){
+    result += numArr[i];
+  }
+  display.innerHTML = result;
+}
+// Simply for the giggles, it actually works though...
+function cheekyOneLinerForALaugh(numArr){
+  var sortedArr = numberArr.sort().join('').split('').sort().reverse().join('');
+  return numArr;
 }
