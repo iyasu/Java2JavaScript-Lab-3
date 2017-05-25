@@ -12,8 +12,11 @@ function assigntment3Point1(){
   display.innerHTML = tempArr;
 }
 
-function example(){
-  var v = 3 +4;
+function assignment3Point2(){
+  var numArray = [1,2,2,35,23,5,37,8];
+  var revArray = numArray.reverse();
+  var splitArr = revArray.toString().replace(/,/g,'');
+  display.innerHTML = splitArr;
 
-  display.innerHTML = v;
+
 }
