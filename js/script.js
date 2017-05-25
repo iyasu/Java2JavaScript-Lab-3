@@ -2,37 +2,25 @@
 
 var display = document.getElementById("display");
 
-
 function zipArrays() {
     var input1 = prompt("Please enter your first array.");
     var input2 = prompt("Please enter your second array.");
     var arr1 = input1.replace(/[^0-9]/g,'').split("");
     var arr2 = input2.replace(/[^0-9]/g,'').split("");
-
+    //always small one add to the bigger one
     if(arr1.length >= arr2.length) {
+        arr1.splice(1, 0, arr2[0]);
         for(var i = 1; i < arr2.length; i++){
-          arr1.splice(i, 0, arr2[i-1]);
+          arr1.splice(2*i+1, 0, arr2[i]);
         }
-        display.innerHTML = "Your combined array is: [" + arr1 + "]";
+        display.innerHTML = "The comined array is: [" + arr1 + "]";
     }else{
-        for(var i = 0; i < arr1.length; i++){
-          arr2.splice(0, 0, arr2[i]);
+        arr2.splice(0, 0, arr1[0]);
+        for(var i = 1; i < arr1.length; i++){
+          arr2.splice(i+1, 0, arr1[i]);
         }
-        display.innerHTML = "Your combined array is: [" + arr2 + "]";
+        display.innerHTML = "The comined array is: [" + arr2 + "]";
     }
-}
-    // var result = [];
-    // var maxLength = (arr1.length >= arr2.length) ?arr1.length :arr2.length;
-    //
-    // for (var i = 0; i < maxLength; i++) {
-    //     if (arr1[i] != null){
-    //         result.push(arr1[i]);
-    //     }
-    //     if (arr2[i] != null){
-    //         result.push(arr2[i]);
-    //     }
-    // }
-    //display.innerHTML = "Your combined array is: [" + result + "]";
 }
 
 function largestPossibleNumber(){
